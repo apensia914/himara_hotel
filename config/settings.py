@@ -135,8 +135,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+<<<<<<< HEAD
 AUTH_USER_MODEL = 'users.User'
 
 STATICFILES_DIR = [
     os.path.join(BASE_DIR, 'static')
 ]
+=======
+STATICFILES_DIR = [
+    os.path.join(BASE_DIR, 'static')
+]
+
+AUTH_USER_MODEL = 'users.User'
+>>>>>>> 5073177 (Users Admin & Template Connecting)
