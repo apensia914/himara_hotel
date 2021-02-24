@@ -19,5 +19,5 @@ class User(AbstractUser):
     ]
 
     profile_picture = models.ImageField(null=True, blank=True)
-    prefer_language = models.CharField(choices=LANGUAGE_CHOICES, max_length=2, default=LANGUAGE_ENGLISH)
+    language_preference = models.CharField(choices=LANGUAGE_CHOICES, max_length=2, default=LANGUAGE_ENGLISH)
     sex = models.CharField(choices=SEX_CHOICES, max_length=20, default=SEX_MALE)
