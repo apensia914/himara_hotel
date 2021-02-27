@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 CREATED_APPS = [
     'users.apps.UsersConfig',
-    'lists.apps.ListsConfig',
+    'shops.apps.ShopsConfig',
     'reservations.apps.ReservationsConfig',
     'reviews.apps.ReviewsConfig',
     'rooms.apps.RoomsConfig',
@@ -140,3 +140,7 @@ AUTH_USER_MODEL = 'users.User'
 STATICFILES_DIR = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'
