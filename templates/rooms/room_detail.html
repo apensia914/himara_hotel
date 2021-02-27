@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+    
+    {% for room in rooms %}
+        <h2>{{room.description}}</h2>
+    {% endfor %}
+    <h1>Room services</h1>
+    {% for amenity in rooms.amenities %}
+        {{ amenity }}
+    {% endfor %}
+        
+        
+{% endblock body %}
+    

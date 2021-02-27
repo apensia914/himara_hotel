@@ -41,7 +41,8 @@ CREATED_APPS = [
 ]
 
 THIRDPARY_APPS = [
-    'django_seed'
+    'django_seed',
+    'el_pagination',
 ]
 
 DJANGO_APPS = [
