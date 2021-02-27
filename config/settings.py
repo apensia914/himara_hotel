@@ -41,7 +41,7 @@ CREATED_APPS = [
 ]
 
 THIRDPARY_APPS = [
-
+    'django_seed'
 ]
 
 DJANGO_APPS = [
