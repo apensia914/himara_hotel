@@ -5,4 +5,4 @@ package.json
 package-lock.json
 node_modules/
 db.sqlite3
-gulpfile.js
+.DS_Store
