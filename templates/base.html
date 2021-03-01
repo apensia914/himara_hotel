@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Donghoon Han">
     <meta name="description" content="Himara Hotel Reservation Website">
-    <link rel="stylesheet" href="">
-    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block extrastyle %}{% endblock extrastyle %}
+    <title>{% block title %}{% endblock title %}Home</title>
 </head>
 <body>
+    <script src="{% static 'js/main.js' %}"></script>
+    {% include 'partials/header.html' %}
+
+    {% include 'partials/middle.html' %}
+
     {% block body %}
     {% endblock body %}
+
+    {% include 'partials/footer.html' %}
+    <script src="https://kit.fontawesome.com/00dde58123.js" crossorigin="anonymous"></script>
 </body>
 </html>

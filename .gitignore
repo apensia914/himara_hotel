@@ -1,3 +1,8 @@
 Pipfile
 Pipfile.lock
 uploads/
+package.json
+package-lock.json
+node_modules/
+db.sqlite3
+gulpfile.js

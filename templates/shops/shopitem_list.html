@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% block title %}Shop{% endblock title %}
+    
 {% block body %}
     
     {% for shopitem in shopitems.object_list %}
@@ -9,6 +11,15 @@
             </a>
         </h1>
     {% endfor %}
+
+    <form method="get" action="{% url 'shops:itemsearch' %}">
+        {{form.as_p}}
+        <button>Search</button>
+    </form>
+    {% for item in items %}
+        <h3>{{items.item_name}}</h3>
+    {% endfor %}
+        
 
     {% if shopitems.has_other_pages %}
         <ul class="pagination">

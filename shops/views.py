@@ -1,6 +1,8 @@
 from django.shortcuts import render
+import django_filters
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import ShopItem
+from .forms import SearchForm
 
 def shop_index(request):
     shopitem_list = ShopItem.objects.all()
@@ -21,5 +23,7 @@ def item_detail(request, pk):
     item = ShopItem.objects.get(pk=pk)
     return render(request, 'shops/shopitem_detail.html', {'item': item})
 
-def item_search(request):
-    return render(request, 'shops/shopitem_search.html')
+def search_item(request):  
+    form = SearchForm()
+
+    return render(request, 'shops/shopitem_search.html', {'form': form})

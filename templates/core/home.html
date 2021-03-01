@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrastyle %}<link rel="stylesheet" href="{% static 'css/home.css' %}">{% endblock extrastyle %}
+
+
+{% block body %}
+<section id="hero">
+    <div class="slider">
+        <div id="first-slide" class="slider-item">
+            <h1 class="slide-title">touch the dream</h1>
+            <h2 class="slide-subtitle">Your everlasting paradise</h2>
+        </div>
+        <div id="second-slide" class="slider-item">
+            <h1 class="slide-title">where heart may relax</h1>
+            <h2 class="slide-subtitle">Splendid quality of services</h2>
+        </div>
+        <div id="third-slide" class="slider-item">
+            <h1 class="slide-title">for your happiness</h1>
+            <h2 class="slide-subtitle">Enjoy shopping our items</h2>
+        </div>
+    </div>
+</section>
+<section id="reservation">
+    <form action="" method="POST">
+        <label for="name">name
+            <input type="text" placeholder="write your name">
+        </label>
+        <label for="email">email
+            <input type="text" placeholder="write your email">
+        </label>
+        <label for="room type">room type
+            <select type="text" placeholder="select room type">
+                    
+            </select>
+        </label>
+        <label for="check-in/out">check-in/out
+            <input type="text" placeholder="DD-MM-YYYY ~ DD-MM-YYYY">
+        </label>
+        <label for="guests">guests
+            <input type="text" placeholder="guests">
+        </label>
+    </form>
+    <button>book room</button>
+</section>
+
+<!-- Introduciton Section -->
+<section id="introduction">
+    <div class="container">
+        <div class="row">
+            <div class="col-intro">
+                <div class="section-title">
+                    <h1>hotel krungthai. since 1990</h1>
+                    <p>high quality accommodation services</p>
+                </div>
+                <div class="section-desc">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate nisi quos porro repudiandae corporis impedit enim esse ipsam maiores voluptatum illo animi, aperiam delectus architecto tempora quidem facilis voluptates possimus saepe, harum necessitatibus inventore molestiae error. Sequi expedita aut nobis possimus. Excepturi eaque rerum quaerat sequi esse reiciendis praesentium rem.</p>
+                </div>
+            </div>
+            <div class="col-prize">
+                <div class="inner-content">
+                    <img src="" alt="logo">
+                    <h4 class="title">Himara.</h5>
+                    <p class="prize-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio maxime, nulla voluptas rem asperiores quasi.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock body %}
+    

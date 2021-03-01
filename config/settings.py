@@ -43,6 +43,7 @@ CREATED_APPS = [
 THIRDPARY_APPS = [
     'django_seed',
     'el_pagination',
+    'django_filters',
 ]
 
 DJANGO_APPS = [
@@ -138,7 +139,7 @@ STATIC_URL = '/static/'
 
 AUTH_USER_MODEL = 'users.User'
 
-STATICFILES_DIR = [
+STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 
