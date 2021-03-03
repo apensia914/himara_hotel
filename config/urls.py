@@ -23,6 +23,7 @@ urlpatterns = [
     path('', include('core.urls', namespace='core')),
     path('shops/', include('shops.urls', namespace='shops')),
     path('rooms/', include('rooms.urls', namespace='rooms')),
+    path('reservations/', include('reservations.urls', namespace='reservations')),
 ]
 
 # Static Files in Dev Mode

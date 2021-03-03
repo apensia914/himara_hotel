@@ -1,4 +1,4 @@
 from django import forms 
 
-class SearchForm(forms.Form):
+class ShopSearchForm(forms.Form):
     name = forms.CharField()

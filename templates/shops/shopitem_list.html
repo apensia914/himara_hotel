@@ -1,18 +1,38 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}Shop{% endblock title %}
+
+
+{% block extrastyle %}
+    <link rel="stylesheet" href="{% static 'css/shop.css' %}">
+{% endblock extrastyle %}
+    
     
 {% block body %}
-    
-    {% for shopitem in shopitems.object_list %}
-        <h1>
-            <a href="{% url 'shops:itemdetail' shopitem.pk %}">
-                {{shopitem.item_name}} / {{shopitem.item_price}}
-            </a>
-        </h1>
-    {% endfor %}
 
-    <form method="get" action="{% url 'shops:itemsearch' %}">
+<!-- Middle Section -->
+<section id="middle-section">
+    <h1 class="middle-section-title">Shops</h1>
+    <span>Home / </span><span class="middle-section-subtitle">Shops</span>
+</section>
+
+<!-- Shop List Main-->
+<section id="shoplist">
+    <div class="container">
+        <div id="shop-item">
+            {% for shopitem in shopitems.object_list %}
+            <a href="{% url 'shops:itemdetail' shopitem.pk %"><img src="{{item.item_picture}}" alt="itemimage"></a>
+            <div class="item-desc">
+                <a href="{% url 'shops:itemdetail' shopitem.pk %}">{{shopitem.item_name}}</a>
+                <h2>{{shopitem.item_price}}</h2>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+    
+    <form method="get" action=".">
         {{form.as_p}}
         <button>Search</button>
     </form>
@@ -20,7 +40,7 @@
         <h3>{{items.item_name}}</h3>
     {% endfor %}
         
-
+<!-- Page -->
     {% if shopitems.has_other_pages %}
         <ul class="pagination">
             {% if shopitems.has_previous %}

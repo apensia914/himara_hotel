@@ -2,12 +2,11 @@ from django.shortcuts import render
 import django_filters
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import ShopItem
-from .forms import SearchForm
+from .forms import ShopSearchForm
 
 def shop_index(request):
     shopitem_list = ShopItem.objects.all()
     page = request.GET.get('page', 1)
-
     paginator = Paginator(shopitem_list, 9) # Shows 9 items per page
 
     try:
@@ -24,6 +23,5 @@ def item_detail(request, pk):
     return render(request, 'shops/shopitem_detail.html', {'item': item})
 
 def search_item(request):  
-    form = SearchForm()
-
+    form = ShopSearchForm()
     return render(request, 'shops/shopitem_search.html', {'form': form})

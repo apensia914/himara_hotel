@@ -16,3 +16,12 @@ a {
 ul, li {
     list-style: none;
 }
+
+/* Middle Section */
+
+#middle-section {
+    background-image: url('../images/middle_bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20vh;
+}

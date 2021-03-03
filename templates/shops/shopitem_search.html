@@ -2,6 +2,9 @@
 
 
 {% block body %}
-    
+<form method="get" action="{% url 'shops:itemsearch' %}">
+    {{form.as_p}}
+    <button>Search</button>
+</form>
 {% endblock body %}
     
