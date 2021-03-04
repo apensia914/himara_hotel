@@ -14,16 +14,20 @@
 <!-- Middle Section -->
 <section id="middle-section">
     <h1 class="middle-section-title">Shops</h1>
-    <span>Home / </span><span class="middle-section-subtitle">Shops</span>
+    <div class="middle-section-subtitle">
+        <span>Home / </span><span>Shops</span>
+    </div>
 </section>
 
 <!-- Shop List Main-->
 <section id="shoplist">
     <div class="container">
         <div id="shop-item">
-            {% for shopitem in shopitems.object_list %}
-            <a href="{% url 'shops:itemdetail' shopitem.pk %"><img src="{{item.item_picture}}" alt="itemimage"></a>
+            {% for item in items %}
+            <img src="{{shopitem.item_picture}}" alt="itemimage">
+            {% endfor %}
             <div class="item-desc">
+            {% for shopitem in shopitems.object_list %}
                 <a href="{% url 'shops:itemdetail' shopitem.pk %}">{{shopitem.item_name}}</a>
                 <h2>{{shopitem.item_price}}</h2>
             </div>

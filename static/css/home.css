@@ -11,7 +11,7 @@
 
 .slider {
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     position: relative;
 }
 
@@ -21,7 +21,7 @@
 
 .slider-item {
     width: 100%;
-    height: 90vh;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

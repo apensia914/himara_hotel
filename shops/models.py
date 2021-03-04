@@ -17,3 +17,8 @@ class ShopItem(TimeStampModel):
 
     def get_absolute_url(self):
         return reverse('shops:itemdetail', kwargs={'pk': self.pk})
+
+
+    def item_thumbnail(self):
+        item_picture = self.photos.all()[:1]
+        return photo.file.url
