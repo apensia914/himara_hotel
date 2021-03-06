@@ -57,6 +57,8 @@ header {
 
 .top-menu li {
     padding: 0 20px;
+    display: flex;
+    align-items: center;
 }
 
 .top-menu li a {
@@ -72,6 +74,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center; 
+    padding: 5px 25px;
 }
 
 .logo a {
@@ -86,6 +89,7 @@ nav {
 
 .navbar-item li {
     padding: 0 40px;
+    font-size: 15px;
 }
 
 .navbar-item li a {

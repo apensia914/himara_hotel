@@ -24,7 +24,7 @@
     <div class="container">
         <div id="shop-item">
             {% for item in items %}
-            <img src="{{shopitem.item_picture}}" alt="itemimage">
+            <img src="{{shopitems.item_picture.photo.url}}" alt="itemimage">
             {% endfor %}
             <div class="item-desc">
             {% for shopitem in shopitems.object_list %}
